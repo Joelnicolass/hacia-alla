@@ -1,27 +1,16 @@
-[gd_scene load_steps=8 format=4 uid="uid://dp6asy5kpkf3r"]
+[gd_scene load_steps=7 format=4 uid="uid://1df7xshady6v"]
 
-[ext_resource type="Shader" path="res://assets/shaders/ps1.gdshader" id="1_g0jk2"]
-[ext_resource type="Texture2D" uid="uid://cbulynvwxilxh" path="res://assets/textures/tex_terrain.png" id="2_yrrh3"]
+[ext_resource type="Shader" uid="uid://gxtj410fjuaf" path="res://assets/materials/mat_terrain.tres" id="1_dh0yb"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7w78"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s68ko"]
 render_priority = 0
-shader = ExtResource("1_g0jk2")
-shader_parameter/affine_mapping = false
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.25
-shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("2_yrrh3")
+shader = ExtResource("1_dh0yb")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_01stn"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x5h2k"]
 render_priority = 0
-shader = ExtResource("1_g0jk2")
-shader_parameter/affine_mapping = false
-shader_parameter/alpha_scissor = 0.5
-shader_parameter/jitter = 0.25
-shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("2_yrrh3")
+shader = ExtResource("1_dh0yb")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_31d5j"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_hpgbf"]
 _surfaces = [{
 "aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
 "format": 34896613377,
@@ -45,15 +34,15 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_yxk2i"]
-resource_name = "terrain-a_Cube_004"
+[sub_resource type="ArrayMesh" id="ArrayMesh_ab3o4"]
+resource_name = "wall-c_Cube_008"
 _surfaces = [{
 "aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
-"attribute_data": PackedByteArray("QAH1aEABljQKfvVoCn6WNA=="),
+"attribute_data": PackedByteArray("OAZLMTgGAQPqdksx6nYBAw=="),
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray("AwAAAAEAAwACAAAA"),
-"material": SubResource("ShaderMaterial_p7w78"),
+"material": SubResource("ShaderMaterial_s68ko"),
 "name": "general_mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -61,11 +50,11 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/7////9/////f////3////9/")
 }, {
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("GARJMhgESTIYBEkyGAT9ABgE/QAYBEkyGAT9AJB5STIYBP0AkHn9AJB5STKQeUkyGARJMpB5/QAYBP0AkHlJMpB5/QCQeUkykHn9AJB5/QA="),
+"attribute_data": PackedByteArray("MoX6/RgESTIyhfr9MoW31zKFt9cyhfr9GAT9AKn6+v0yhbfXqfq316n6+v2QeUkyMoX6/an6t9cyhbfXqfr6/ZB5/QCp+vr9qfq316n6t9c="),
 "format": 34896613399,
 "index_count": 30,
 "index_data": PackedByteArray("AgAJAAQAAgAHAAkABQASAAgABQAPABIAEQAOABMAEQAMAA4ACgADAA0ACgAAAAMABgALABAABgABAAsA"),
-"material": SubResource("ShaderMaterial_01stn"),
+"material": SubResource("ShaderMaterial_x5h2k"),
 "name": "general_mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -73,18 +62,18 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP//AIAAAAAA////PwAAAAD//wAAAAD/////AIAAAP////8AAAAAAAAAAAAAAAAAAAAA/z8AAAAAAAAAAAAA//8AAAAAAAD//wAAAAD//wAA//8AgP//AAD///8///8AAP///7////////8AgP////////+///8AAAAAAAD//wAAAAD/P///AAAAAP+//////wAAAAD/////AAD/v/9///8AAP9//z//f/9/////P/9/////fwAA/3//P/9/////f/8//3//f///AAD/f/9/AAD/f////38AAP///38AAP9//38AAP///3//fwAA")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_31d5j")
+shadow_mesh = SubResource("ArrayMesh_hpgbf")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v4kwv"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x5khm"]
 data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1)
 
-[node name="terrain-a" type="Node3D"]
+[node name="wall-c" type="Node3D"]
 
-[node name="terrain_a" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_yxk2i")
+[node name="wall_c" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_ab3o4")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="terrain_a"]
+[node name="StaticBody3D" type="StaticBody3D" parent="wall_c"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="terrain_a/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_v4kwv")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall_c/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_x5khm")

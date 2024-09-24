@@ -4,7 +4,4 @@
 
 [resource]
 resource_name = "YMr-Head"
-cull_mode = 2
 albedo_texture = ExtResource("1_bc6jv")
-metallic = 1.0
-roughness = 0.858579

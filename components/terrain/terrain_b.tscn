@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://c28xyfcggtaac"]
 
-[ext_resource type="Shader" uid="uid://gxtj410fjuaf" path="res://components/terrain/mat_terrain.tres" id="1_rpg3m"]
+[ext_resource type="Shader" uid="uid://gxtj410fjuaf" path="res://assets/materials/mat_terrain.tres" id="1_rpg3m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fxvmo"]
 render_priority = 0

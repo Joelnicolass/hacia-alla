@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://bruf6766e4fe6"]
+
+[ext_resource type="Script" path="res://test_lvl.gd" id="1_q3850"]
+[ext_resource type="PackedScene" uid="uid://dp6asy5kpkf3r" path="res://components/terrain/terrain_a.tscn" id="2_b3l48"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hkc2g"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.908261, 0.279877, 0, 1)
+sky_curve = 0.0222977
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.879623, 0.274853, 0, 1)
+ground_curve = 0.0229741
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_612mr"]
+sky_material = SubResource("ProceduralSkyMaterial_hkc2g")
+
+[sub_resource type="Environment" id="Environment_nitk5"]
+background_mode = 2
+sky = SubResource("Sky_612mr")
+glow_enabled = true
+glow_bloom = 0.08
+volumetric_fog_ambient_inject = 8.2
+volumetric_fog_sky_affect = 0.325
+
+[node name="test-level" type="Node3D"]
+script = ExtResource("1_q3850")
+
+[node name="environment" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
+environment = SubResource("Environment_nitk5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="environment"]
+transform = Transform3D(0.692181, 0.588443, -0.417876, 0, 0.578997, 0.81533, 0.721724, -0.564356, 0.40077, 0, 2.8243, 0)
+shadow_enabled = true
+
+[node name="scenario" type="Node" parent="."]
+
+[node name="terrain-a" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="terrain-a2" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+
+[node name="terrain-a3" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="terrain-a4" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="terrain-a5" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+
+[node name="terrain-a6" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="terrain-a7" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+
+[node name="terrain-a8" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+
+[node name="terrain-a9" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+
+[node name="terrain-a10" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+
+[node name="terrain-a11" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+
+[node name="terrain-a12" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="terrain-a13" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="terrain-a14" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="terrain-a15" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
+
+[node name="terrain-a16" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="terrain-a17" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="terrain-a18" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="terrain-a19" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="terrain-a20" parent="scenario" instance=ExtResource("2_b3l48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, -1)
+
+[node name="Camera3D" type="Camera3D" parent="scenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

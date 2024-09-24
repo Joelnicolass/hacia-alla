@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bruf6766e4fe6"]
+[gd_scene load_steps=5 format=3 uid="uid://bruf6766e4fe6"]
 
 [ext_resource type="Script" path="res://test_lvl.gd" id="1_q3850"]
 [ext_resource type="PackedScene" uid="uid://dp6asy5kpkf3r" path="res://components/terrain/terrain_a.tscn" id="2_b3l48"]
 [ext_resource type="PackedScene" uid="uid://blbkvihq081e7" path="res://components/player/player.tscn" id="3_h86vx"]
+[ext_resource type="PackedScene" uid="uid://1csi67b1xt0" path="res://components/assets/chair_exam.tscn" id="4_cnglt"]
 
 [node name="test-level" type="Node3D"]
 script = ExtResource("1_q3850")
@@ -380,3 +381,6 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 2, 2, 4)
 
 [node name="player" parent="scenario" instance=ExtResource("3_h86vx")]
 transform = Transform3D(-0.999726, 0, 0.0234202, 0, 1, 0, -0.0234202, 0, -0.999726, 4, 1.33108, -1)
+
+[node name="chair-exam" parent="." instance=ExtResource("4_cnglt")]
+transform = Transform3D(0.513586, 0, -0.858038, 0, 1, 0, 0.858038, 0, 0.513586, 6.1399, 1, -2.47861)

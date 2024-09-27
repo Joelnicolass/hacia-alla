@@ -10,6 +10,7 @@ shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.5
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/color = Vector4(1, 1, 1, 1)
 shader_parameter/albedo = ExtResource("2_yrrh3")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_01stn"]
@@ -19,6 +20,7 @@ shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.5
 shader_parameter/jitter = 0.25
 shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/color = Vector4(1, 1, 1, 1)
 shader_parameter/albedo = ExtResource("2_yrrh3")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_31d5j"]
@@ -45,32 +47,31 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_yxk2i"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qdytf"]
 resource_name = "terrain-a_Cube_004"
+lightmap_size_hint = Vector2i(86, 130)
 _surfaces = [{
 "aabb": AABB(-1, 1, -1, 2, 1e-05, 2),
-"attribute_data": PackedByteArray("QAH1aEABljQKfvVoCn6WNA=="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("/BT8PtJYUj4SdwQ/5EYuP6AAoDvS6tE++oJ+P/ADfz+gAKA70lhSPvqCfj/kRi4//BT8PtLq0T4SdwQ/8AN/Pw=="),
+"format": 34359742519,
 "index_count": 6,
-"index_data": PackedByteArray("AwAAAAEAAwACAAAA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
 "material": SubResource("ShaderMaterial_p7w78"),
-"name": "general_mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray("AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/7////9/////f////3////9/")
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAgD8AAIC/AACAPwAAgD8AAIA//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
 }, {
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
-"attribute_data": PackedByteArray("GARJMhgESTIYBEkyGAT9ABgE/QAYBEkyGAT9AJB5STIYBP0AkHn9AJB5STKQeUkyGARJMpB5/QAYBP0AkHlJMpB5/QCQeUkykHn9AJB5/QA="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("gwCDPMkkST7cEfc+8AN/P/Mg8z79AH07+oK+O+RGLj+DAIM8/QB9O/qCvjvwA38/8yDzPskkST7cEfc+5EYuP4MAgzzJJEk+EncEP/RCrz7zIPM+/QB9O/qCfj+GXig/gwCDPP0AfTsSdwQ/hl4oP/Mg8z7JJEk++oJ+P/RCrz7zIPM+ySRJPtwR9z7BD3w7gwCDPP0AfTv6gr47N3KjPvMg8z79AH07+oK+O8EPfDuDAIM8ySRJPtwR9z43cqM+8yDzPskkST4SdwQ/wQ98O4MAgzz9AH07+oJ+Pzdyoz7zIPM+/QB9OxJ3BD83cqM+gwCDPMkkST76gn4/wQ98O4MAgzz9AH073BH3PvRCrz7zIPM+ySRJPvqCvjuGXig/8yDzPv0AfTv6gr479EKvPoMAgzzJJEk+3BH3PoZeKD8="),
+"format": 34359742519,
 "index_count": 30,
-"index_data": PackedByteArray("AgAJAAQAAgAHAAkABQASAAgABQAPABIAEQAOABMAEQAMAA4ACgADAA0ACgAAAAMABgALABAABgABAAsA"),
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
 "material": SubResource("ShaderMaterial_01stn"),
-"name": "general_mat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 20,
-"vertex_data": PackedByteArray("AAAAAP//AIAAAAAA////PwAAAAD//wAAAAD/////AIAAAP////8AAAAAAAAAAAAAAAAAAAAA/z8AAAAAAAAAAAAA//8AAAAAAAD//wAAAAD//wAA//8AgP//AAD///8///8AAP///7////////8AgP////////+///8AAAAAAAD//wAAAAD/P///AAAAAP+//////wAAAAD/////AAD/v/9///8AAP9//z//f/9/////P/9/////fwAA/3//P/9/////f/8//3//f///AAD/f/9/AAD/f////38AAP///38AAP9//38AAP///3//fwAA")
+"vertex_data": PackedByteArray("AACAvwAAgL8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAPwAAgD8AAIC/AACAvwAAgD8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAvwAAgD8AAIA/AACAPwAAgD8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIC/AACAvwAAgL8AAIA/AAAFgP7/AAAAAAWA/v8AAAAABYD+/wAAAAAFgP7/AAD/////////P/////////8//////////z//////////P/3/AID+//7//f8AgP7//v/9/wCA/v/+//3/AID+//7//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//78CgAAA/v//PwKAAAD+//8/AoAAAP7//z8CgAAA/v//Pw==")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_31d5j")
@@ -81,7 +82,7 @@ data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 
 [node name="terrain-a" type="Node3D"]
 
 [node name="terrain_a" type="MeshInstance3D" parent="."]
-mesh = SubResource("ArrayMesh_yxk2i")
+mesh = SubResource("ArrayMesh_qdytf")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="terrain_a"]

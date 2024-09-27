@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bruf6766e4fe6"]
+[gd_scene load_steps=13 format=3 uid="uid://bruf6766e4fe6"]
 
 [ext_resource type="Script" path="res://test_lvl.gd" id="1_q3850"]
 [ext_resource type="PackedScene" uid="uid://dp6asy5kpkf3r" path="res://components/terrain/terrain_a.tscn" id="2_b3l48"]
@@ -19,10 +19,6 @@ ssao_enabled = true
 ssao_intensity = 5.0
 glow_enabled = true
 fog_light_energy = 0.41
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_dsmhn"]
-dof_blur_far_enabled = true
-dof_blur_amount = 0.02
 
 [node name="test-level" type="Node3D"]
 script = ExtResource("1_q3850")
@@ -111,7 +107,6 @@ spot_angle = 72.27
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
 environment = SubResource("Environment_3enro")
-camera_attributes = SubResource("CameraAttributesPractical_dsmhn")
 
 [node name="scenario" type="Node" parent="."]
 

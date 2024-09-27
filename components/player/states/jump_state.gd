@@ -26,12 +26,13 @@ func physics_update(delta):
 
 
 func _jump():
-    character.stretch()
+    var is_first_jump = character.JUMPS_LEFT == character.JUMPS
+
     character.velocity.y = character.JUMP_FORCE
     animator.set("parameters/jump_shot/request", AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
-    if character.JUMPS_LEFT != character.JUMPS:
-        pass
-
+    
+    if not is_first_jump:
+        character.stretch()
 
     character.JUMPS_LEFT -= 1
 
